@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUBG Mobile School Cup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PUBG Mobile School Cup</h1>
+        <form id="registrationForm">
+            <label for="id">ID PUBG:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="school">Nama Sekolah:</label>
+            <input type="text" id="school" name="school" required>
+
+            <label for="email">Gmail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="province">Provinsi:</label>
+            <select id="province" name="province" required>
+                <option value="">Pilih Provinsi</option>
+                <option value="aceh">Aceh</option>
+                <option value="bali">Bali</option>
+                <option value="banten">Banten</option>
+                <option value="bengkulu">Bengkulu</option>
+                <option value="gorontalo">Gorontalo</option>
+                <option value="jakarta">DKI Jakarta</option>
+                <option value="jambi">Jambi</option>
+                <option value="jawa_barat">Jawa Barat</option>
+                <option value="jawa_tengah">Jawa Tengah</option>
+                <option value="jawa_timur">Jawa Timur</option>
+                <option value="kalimantan_barat">Kalimantan Barat</option>
+                <option value="kalimantan_selatan">Kalimantan Selatan</option>
+                <option value="kalimantan_tengah">Kalimantan Tengah</option>
+                <option value="kalimantan_timur">Kalimantan Timur</option>
+                <option value="kalimantan_utara">Kalimantan Utara</option>
+                <option value="kepulauan_bangka_belitung">Kepulauan Bangka Belitung</option>
+                <option value="kepulauan_riau">Kepulauan Riau</option>
+                <option value="lampung">Lampung</option>
+                <option value="maluku">Maluku</option>
+                <option value="maluku_utara">Maluku Utara</option>
+                <option value="nusa_tenggara_barat">Nusa Tenggara Barat</option>
+                <option value="nusa_tenggara_timur">Nusa Tenggara Timur</option>
+                <option value="papua">Papua</option>
+                <option value="papua_barat">Papua Barat</option>
+                <option value="riau">Riau</option>
+                <option value="sulawesi_barat">Sulawesi Barat</option>
+                <option value="sulawesi_selatan">Sulawesi Selatan</option>
+                <option value="sulawesi_tengah">Sulawesi Tengah</option>
+                <option value="sulawesi_tenggara">Sulawesi Tenggara</option>
+                <option value="sulawesi_utara">Sulawesi Utara</option>
+                <option value="sumatera_barat">Sumatera Barat</option>
+                <option value="sumatera_selatan">Sumatera Selatan</option>
+                <option value="sumatera_utara">Sumatera Utara</option>
+                <option value="yogyakarta">DI Yogyakarta</option>
+            </select>
+
+            <button type="submit">Daftar</button>
+        </form>
+        <div class="success-message" id="successMessage">
+            Pendaftaran berhasil, Kami akan mengirim kabar melalui gmail anda.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
